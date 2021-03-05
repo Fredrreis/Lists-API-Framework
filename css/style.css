@@ -9,6 +9,10 @@
 /*header*/
 /*nav*/
 
+#main {
+  background-image: url(../img/background.png);
+}
+
 body {
   background-color: #cccccc;
   background: no-repeat right top fixed scroll;
@@ -16,10 +20,9 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-}
-
-nav {
+  height: 170vh;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -28,50 +31,53 @@ nav a {
 }
 
 .hamsterimg {
-  width: 45px;
+  width: 7vh;
 }
 
 .welcomeimg {
-  width: 130px;
-}
-
-.navtittle {
-  padding: 0 20px 0 25px;
-}
-
-.navhome {
+  width: 18vh;
   padding: 0 15px 0 15px;
 }
 
-/*menu dropdown*/
-
-.dropbtn {
-  background-color: transparent;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  min-width: 50px;
-  min-height: 50px;
-  display: flex;
-  justify-content: flex-start;
-  cursor: pointer;
+.navtittle {
+  margin-left: 20px;
 }
+
+.navtittle:hover {
+  color: black;
+}
+
+/*menu dropdown*/
 
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
+.dropbtn {
+  background-color: transparent;
+  color: black;
+  padding: 16px;
+  font-size: 2vh;
+  border: none;
+  min-width: 50px;
+  min-height: 50px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: whitesmoke;
-  min-width: 160px;
+  min-width: 20vh;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   right: 0;
   left: auto;
   z-index: 1;
+  font-size: 2.3vh;
 }
 
 .dropdown-content a {
@@ -118,7 +124,7 @@ main {
 main a img {
   border-radius: 10px;
   width: 90%;
-  max-width: 360px;
+  max-width: 55vh;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -149,44 +155,96 @@ main div {
   align-items: center;
   flex-flow: column;
 }
+
 /*main ends*/
 /*table*/
 
-.tables {
-  margin-top: 2rem;
+.divtable {
+  overflow-x: auto;
   border-collapse: collapse;
   border-spacing: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   width: 100%;
-  padding: 20px;
+}
+
+.divtable div {
+  overflow: auto;
+  display: flex;
+  height: 100%;
+  max-width: 90%;
+  min-width: 700px;
 }
 
 .headertable {
   background-color: #f7956a;
   color: whitesmoke;
+  text-align: center;
+  font-size: 2.6vh;
+}
+
+.tables {
+  display: block;
+  height: 100vh;
 }
 
 tbody {
   background-color: whitesmoke;
+  font-size: 2.5vh;
 }
 
+.tdposts {
+  text-align: center;
+}
+
+.tdalbums {
+  text-align: center;
+}
+
+.tdtodos {
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f7956a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/*media*/
+
+@media (max-width: 600px) {
+  .divtable {
+    justify-content: unset;
+  }
+}
+
+/*media ends*/
 /*table ends*/
 /*footer*/
-
-.footerindex {
-  position: relative;
-}
 
 footer {
   background-color: #f7f2d4;
   bottom: 0;
   width: 100%;
-  text-align: center;
-  display: flex;
-  position: absolute;
+  position: relative;
 }
 
 /*footer ends*/
@@ -194,20 +252,12 @@ footer {
 
 /*media*/
 @media (min-width: 600px) {
+  body {
+    height: 100vh;
+  }
+
   .navtittle {
     padding: 0 40px 0 50px;
-  }
-
-  .dropbtn1 {
-    margin-left: 1040px;
-  }
-
-  .dropbtn2 {
-    margin-left: 1018px;
-  }
-
-  .dropbtn3 {
-    margin-left: 1034px;
   }
 
   main {
@@ -222,12 +272,12 @@ footer {
     width: 95%;
   }
 
-  footer {
-    position: fixed;
+  .divtable {
+    margin-top: 1rem;
   }
 
-  .footerindex {
-    position: fixed;
+  .tables {
+    margin-top: 0.5rem;
   }
 }
 /*media ends*/

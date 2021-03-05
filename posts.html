@@ -16,14 +16,14 @@
 
 <body style="background-color: rgba(0, 0, 0, 0.788)">
   <header class="header">
-    <nav class="navbar navbar-expand-lg navbar bg-light" style="background-color: whitesmoke;">
-      <a class="navbar-brand" href="#">
-        <img class="hamsterimg" src="img/hamster.png"><strong><a class="navbar-brand navtittle"
-            href="#">Posts</a></strong>
-      </a>
+    <nav class="navbar navbar bg-light" style="background-color: whitesmoke;">
+      <div>
+        <img class="hamsterimg" src="img/hamster.png">
+        <strong><a class="navbar-brand navtittle" href="#">Posts</a></strong>
+      </div>
       <div class="dropdown">
         <button class="dropbtn dropbtn1">
-          <i class="fa fa-bars" style="font-size: 30px;"></i>
+          <i class="fa fa-bars" style="font-size: 4.5vh;"></i>
         </button>
         <div class="dropdown-content">
           <a href="index.html">Home</a>
@@ -33,37 +33,21 @@
       </div>  
     </nav>
   </header>
-  <div class="tables">
-    <table class="table table-striped">
-      <thead>
-        <tr class="headertable">
-          <th scope="col">#</th>
-          <th scope="col">Postagens</th>
-          <th scope="col">Albuns</th>
-          <th scope="col">Todos</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-        </tr>
+  <div class="divtable">
+    <div>
+      <table class="table table-striped tables">
+        <thead>
+          <tr class="headertable">
+          <th scope="row">UserId</th>
+          <th scope="row">PostId</th>
+          <th scope="row">Title</th>
+          <th scope="row">Text</th>
+          </tr>
+        </thead>
+      <tbody id="tableBody" class="bodytable">
       </tbody>
-    </table>
+      </table>
+    </div>
   </div>
   <footer class="text-center text-white">
     <div class="container pt-4">
@@ -87,6 +71,7 @@
     </div>
   </footer>
 </body>
+<script src ="js/posts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </html>
